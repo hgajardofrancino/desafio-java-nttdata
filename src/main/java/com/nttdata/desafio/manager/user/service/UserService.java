@@ -5,9 +5,9 @@ import com.nttdata.desafio.manager.user.model.User;
 import java.util.List;
 
 public interface UserService {
-    User create(User user);
-    User update(User user);
+    User create(final User user) throws Exception;
+    User update(final User user) throws Exception;
     List<User> list();
-    User get();
-    void delete();
+    User get(final String id) throws Exception;
+    void delete(final String id) throws Exception;
 }

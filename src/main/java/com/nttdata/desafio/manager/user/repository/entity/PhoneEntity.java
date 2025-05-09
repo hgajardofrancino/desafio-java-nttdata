@@ -8,12 +8,12 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "phone_user")
+@Table(name = "telefonos")
 public class PhoneEntity {
     @Id
     @GeneratedValue
     private Long id;
     private Long number;
-    private Integer citycode;
-    private Integer contrycode;
+    private Integer cityCode;
+    private Integer countryCode;
 }

@@ -1,27 +1,27 @@
 package com.nttdata.desafio.manager.user.controller.response;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Data
 public class UserResponse {
+    @JsonProperty("id")
     private String id;
-    private String name;
-    private String email;
-    private String password;
-    private List<Phone> phones;
-    private LocalDateTime created;
-    private LocalDateTime modified;
-    private LocalDateTime lastLogin;
-    private String token;
-    private Boolean isActive;
 
-    @Data
-    public static class Phone {
-        private Long number;
-        private Integer cityCode;
-        private Integer countryCode;
-    }
+    @JsonProperty("creado")
+    private LocalDateTime created;
+
+    @JsonProperty("modificado")
+    private LocalDateTime modified;
+
+    @JsonProperty("ultimoLogin")
+    private LocalDateTime lastLogin;
+
+    @JsonProperty("token")
+    private String token;
+
+    @JsonProperty("activo")
+    private Boolean active;
 }

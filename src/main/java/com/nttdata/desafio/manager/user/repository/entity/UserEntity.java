@@ -9,7 +9,7 @@ import java.util.List;
 
 @Entity
 @Data
-@Table(name = "user")
+@Table(name = "usuarios")
 public class UserEntity {
 
     @Id
@@ -25,6 +25,6 @@ public class UserEntity {
     private LocalDateTime modified;
     private LocalDateTime lastLogin;
     private String token;
-    private Boolean isActive;
+    private Boolean active;
 }
 
