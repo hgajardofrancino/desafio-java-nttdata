@@ -6,6 +6,7 @@ import com.nttdata.desafio.manager.user.repository.UserRepository;
 import com.nttdata.desafio.manager.user.repository.entity.PhoneEntity;
 import com.nttdata.desafio.manager.user.repository.entity.UserEntity;
 import com.nttdata.desafio.manager.user.validators.EmailValidator;
+import com.nttdata.desafio.manager.user.validators.PasswordValidator;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,11 +23,13 @@ public class UserServiceImpl implements UserService {
     private final UserRepository repository;
     private final UserMapper userMapper;
     private final EmailValidator emailValidator;
+    private final PasswordValidator passwordValidator;
 
     @Override
     public User create(final User user) throws Exception {
 
         emailValidator.validate(user.getEmail());
+        passwordValidator.validate(user.getPassword());
 
         if (repository.findByEmail(user.getEmail()).isPresent()) {
             throw new Exception("El correo ya está registrado");
@@ -68,6 +71,7 @@ public class UserServiceImpl implements UserService {
         }
 
         if (user.getPassword() != null && !user.getPassword().isEmpty()) {
+            passwordValidator.validate(user.getPassword());
             currentEntity.setPassword(user.getPassword());
         }
 
