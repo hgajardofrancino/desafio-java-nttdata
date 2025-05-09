@@ -13,7 +13,6 @@ import java.util.List;
 @Component
 public class UserMapper {
 
-    // Mapea de UserRequest a User
     public User toUser(UserRequest req) {
         if (req == null) return null;
 
@@ -37,7 +36,6 @@ public class UserMapper {
         return user;
     }
 
-    // Mapea de User a UserEntity
     public UserEntity toUserEntity(User user) {
         if (user == null) return null;
 
@@ -67,7 +65,6 @@ public class UserMapper {
         return entity;
     }
 
-    // Mapea de UserEntity a User
     public User toUser(UserEntity entity) {
         if (entity == null) return null;
 
@@ -97,7 +94,6 @@ public class UserMapper {
         return user;
     }
 
-    // Mapea de User a UserResponse
     public UserResponse toUserResponse(User user) {
         if (user == null) return null;
 

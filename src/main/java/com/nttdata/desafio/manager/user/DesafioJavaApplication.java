@@ -1,4 +1,4 @@
-package com.nttdata.desafio;
+package com.nttdata.desafio.manager.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

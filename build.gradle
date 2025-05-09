@@ -35,6 +35,8 @@ dependencies {
 
 	implementation 'com.fasterxml.jackson.core:jackson-databind'
 
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 
@@ -44,11 +46,4 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
-}
-
-
-tasks.withType(JavaCompile).configureEach {
-	options.compilerArgs += [
-			'-Amapstruct.defaultComponentModel=spring'
-	]
 }
