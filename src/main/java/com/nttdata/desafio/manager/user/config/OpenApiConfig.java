@@ -11,7 +11,7 @@ public class OpenApiConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("API User Manager")
+                        .title("User Manager API")
                         .version("1.0.0")
                 );
     }
