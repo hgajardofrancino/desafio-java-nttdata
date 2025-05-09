@@ -79,7 +79,7 @@ A coninuacion se muestran los CURLs asociados a los endpoints disponibles para l
     }'
 ```
 
-### - Listar todas las usuarios
+### - Listar todos los usuarios
 
 ```bash
     curl -X GET http://localhost:8080/api/user/ \
