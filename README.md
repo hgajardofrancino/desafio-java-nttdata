@@ -125,14 +125,6 @@ A coninuacion se muestran los CURLs asociados a los endpoints disponibles para l
 
 ---
 
-## Swagger UI
-
-Podés ver la documentación completa:
-
-[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
-
----
-
 ## Contacto
 
 Para consultas o sugerencias, favor escribirme a [hgajardofrancino@gmail.com](mailto:hgajardofrancinol@gmail.com).
